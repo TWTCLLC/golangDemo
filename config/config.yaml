@@ -1,0 +1,6 @@
+database:
+  URI: "mongodb://localhost:27017"
+
+linebot:
+  secret: "dummy secret channel"
+  token: "dummy token"
