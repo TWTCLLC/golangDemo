@@ -12,12 +12,11 @@ func ConfigInit() viper.Viper {
 	viper.AddConfigPath("./config/")
 	viper.SetDefault("application.port", 8080)
 
-	err := viper.ReadInConfig()
-	if err != nil {
+	err := viper.ReadInConfig() // Find and read the config file
+	if err != nil {             // Handle errors reading the config file
 		panic(fmt.Errorf("fatal error config file: %w", err))
 	}
 
 	viper := viper.GetViper()
-	fmt.Println("Config successfully loaded")
 	return *viper
 }
